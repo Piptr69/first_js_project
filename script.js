@@ -1,21 +1,19 @@
-let number = 16;
+let gridContainer = document.querySelector('#grid');
 function generateGrid(number)
 {
-    let gridContainer = document.querySelector('#grid');
-for (let i = 0; i < number; i++)
-{
-    let rows = document.createElement("div");
-    rows.classList.add("rows");
-    for (let j = 0; j < number; j++)
+    for (let i = 0; i < number; i++)
     {
-        let div = document.createElement("div");
-        div.classList.add("square");
-        rows.appendChild(div);
+        let rows = document.createElement("div");
+        rows.classList.add("row");
+        for (let j = 0; j < number; j++)
+        {
+            let div = document.createElement("div");
+            div.classList.add("square");
+            rows.appendChild(div);
+        }
+        gridContainer.append(rows);
     }
-    gridContainer.append(rows);
 }
-}
-generateGrid(16);
 
 const squares = document.querySelectorAll('.square');
 
@@ -31,9 +29,20 @@ squares.forEach((square) => {
     });
 });
 
+function deleteGrid()
+{
+    const rows = document.querySelectorAll('.row');
+    rows.forEach((row) => {
+        gridContainer.removeChild(row);
+    });
+}
+
 const button = document.querySelector('#button');
 
 button.addEventListener('click', () => {
     let newNumber = prompt('Type number of squares');
+    deleteGrid();
     generateGrid(newNumber);
 });
+
+generateGrid(16);
