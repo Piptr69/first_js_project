@@ -4,9 +4,9 @@ body {
     margin: 0;
 }
 
-.rows {
+.row {
     display: flex;
-    flex: 1;
+    margin: 0;
 }
 
 #grid {
@@ -14,22 +14,25 @@ body {
     flex-direction: column;
     height: 90%;
     width: auto;
+    justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
 .square {
     border: 1px solid black;
-    width: 40px;
-    width: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 #button {
     width: 100px;
-    height: 40px;
+    height: 100%;
     margin: 8px;
 }
 
 #button-box {
     display: flex;
     justify-content: center;
+    height: 10%;
 }

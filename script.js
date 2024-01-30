@@ -14,20 +14,21 @@ function generateGrid(number)
         gridContainer.append(rows);
     }
 }
-
-const squares = document.querySelectorAll('.square');
-
-squares.forEach((square) => {
-    square.addEventListener('mouseover', () => {
-        square.setAttribute("style", "background-color:black;");
+function lightSquares() {
+    const squares = document.querySelectorAll('.square');
+    squares.forEach((square) => {
+        square.addEventListener('mouseover', () => {
+            square.setAttribute("style", "background-color:black;");
+        });
     });
-});
-
-squares.forEach((square) => {
-    square.addEventListener('mouseout', () => {
-        square.setAttribute("style", "background-color:white;");
+    
+    squares.forEach((square) => {
+        square.addEventListener('mouseout', () => {
+            square.setAttribute("style", "background-color:white;");
+        });
     });
-});
+}
+
 
 function deleteGrid()
 {
@@ -43,6 +44,8 @@ button.addEventListener('click', () => {
     let newNumber = prompt('Type number of squares');
     deleteGrid();
     generateGrid(newNumber);
+    lightSquares()
 });
 
 generateGrid(16);
+lightSquares();
