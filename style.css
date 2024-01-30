@@ -17,8 +17,7 @@ body {
 }
 
 .square {
-    border: 2px solid black;
+    border: 1px solid black;
     width: 40px;
     width: 40px;
-    margin: 8px;
 }

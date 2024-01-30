@@ -11,3 +11,16 @@ for (let i = 0; i < 16; i++)
     }
     gridContainer.append(rows);
 }
+
+const squares = document.querySelectorAll('.square');
+squares.forEach((square) => {
+    square.addEventListener('mouseover', () => {
+        square.setAttribute("style", "background-color:black;");
+    });
+});
+
+squares.forEach((square) => {
+    square.addEventListener('mouseout', () => {
+        square.setAttribute("style", "background-color:white;");
+    });
+});
