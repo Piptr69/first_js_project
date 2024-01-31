@@ -4,27 +4,22 @@ body {
     margin: 0;
     background-color: lightgray;
 }
-
-#title {
-    font-size: 64px;
-}
-
-#main-body,
-#title
-{
+.header,
+.footer {
     display: flex;
-    justify-content: flex-start;
-    gap: 100px;
-    margin-left: 350px;
+    justify-content: center;
 }
 
-#drawing-board{
+.header {
+    font-size: 40px;
+}
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+#drawing-board {
     background-color: white;
-    height: 420px;
-    width: 420px;
-}
-
-#button-list {
-    display: flex;
-    flex-direction: column;
+    width: 500px;
+    height: 500px;
 }
