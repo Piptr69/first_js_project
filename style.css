@@ -7,7 +7,9 @@ body {
 .row {
     display: flex;
     margin: 0;
-    flex-grow: 1;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 #grid {
@@ -24,7 +26,6 @@ body {
     border: 1px solid black;
     width: 30px;
     height: 30px;
-    flex-shrink: 1;
 }
 
 #button {
@@ -36,5 +37,5 @@ body {
 #button-box {
     display: flex;
     justify-content: center;
-    height: 10%;
+    width: 940px;
 }
