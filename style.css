@@ -7,13 +7,14 @@ body {
 .row {
     display: flex;
     margin: 0;
+    flex-grow: 1;
 }
 
 #grid {
     display: flex;
     flex-direction: column;
-    height: 90%;
-    width: auto;
+    height: 940px;
+    width: 940px;
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -23,6 +24,7 @@ body {
     border: 1px solid black;
     width: 30px;
     height: 30px;
+    flex-shrink: 1;
 }
 
 #button {
