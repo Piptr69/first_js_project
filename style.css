@@ -1,19 +1,17 @@
-html,
-body {
+html, body {
     height: 100%;
     margin: 0;
 }
 
-.row {
+body {
     display: flex;
-    margin: 0;
+    flex-direction: column;
+    align-items: center;
 }
 
 #grid {
     display: flex;
     flex-direction: column;
-    height: 512px;
-    width: 512px;
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -21,13 +19,12 @@ body {
 
 .square {
     border: 1px solid black;
-    width: 30px;
-    height: 30px;
+    width: 30px; /* Set a fixed width for each square */
+    height: 30px; /* Set a fixed height for each square */
 }
 
 #button {
     width: 100px;
-    height: 100%;
     margin: 8px;
 }
 
@@ -40,11 +37,22 @@ body {
 #grid-box {
     display: flex;
     justify-content: center;
-    width: 512px;
 }
 
-body {
+.row {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0;
+}
+
+/* Add the following CSS to dynamically calculate the width of the grid based on the number of squares */
+#grid-box .row {
+    width: auto; /* Reset the width for each row */
+}
+
+#grid-box .row .square {
+    flex: 0 0 30px; /* Set a fixed size for each square within a row */
+}
+
+#grid-box .row .square:last-child {
+    margin-right: 0; /* Remove the right margin for the last square in a row */
 }
