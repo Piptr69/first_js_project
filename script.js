@@ -14,6 +14,7 @@ function drawBoard(size) {
         container.appendChild(row);
     }
 }
+drawBoard(16);
 
 const squares = document.querySelectorAll('.square');
 
@@ -31,5 +32,4 @@ function addTrail() {
     });
 }
 
-drawBoard(16);
 addTrail();
