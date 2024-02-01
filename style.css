@@ -12,6 +12,10 @@ body {
 
 .header {
     font-size: 40px;
+    text-align: center;
+    align-items: center;
+    padding: 30px 0;
+    height: 100px;
 }
 .main {
     display: flex;
@@ -34,9 +38,25 @@ body {
     width: 200px;
 }
 
-button {
-    margin: 10px 0;
+button,
+input {
+    margin: 15px 0;
     height: 40px;
     border-radius: 5px;
-    border: darkgray solid 2px;
+    border: black solid 2px;
+    font-size: 16px;
+    background-color: inherit;
+}
+
+input {
+    border-radius:100%;
+    height: 80px;
+    width: 80px;
+    align-self: center;
+    background-color: black;
+}
+
+#sizeValue {
+    font-size: 20px;
+    align-self: center;
 }
