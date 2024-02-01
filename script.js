@@ -1,13 +1,18 @@
 const container = document.querySelector('#drawing-board');
-for (let i = 0; i < 16; i++)
-{
-    let row = document.createElement('div');
-    for (let j = 0; j < 16; j++)
+
+function drawBoard(size) {
+    for (let i = 0; i < size; i++)
     {
-        let square = document.createElement('div');
-        square.classList.add('square');
-        square.textContent = 'test';
-        row.appendChild(square);
+        const row = document.createElement('div');
+        row.classList.add('row');
+        for (let j = 0; j < size; j++)
+        {
+            const square = document.createElement('div');
+            square.classList.add('square');
+            row.appendChild(square);
+        }
+        container.appendChild(row);
     }
-    container.appendChild(row);
 }
+
+drawBoard(16);
