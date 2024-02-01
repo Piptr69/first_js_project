@@ -4,7 +4,7 @@ function drawBoard(size) {
     for (let i = 0; i < size; i++)
     {
         const row = document.createElement('div');
-        row.classList.add('row');
+        row.classList.add('row');        
         for (let j = 0; j < size; j++)
         {
             const square = document.createElement('div');
@@ -16,3 +16,16 @@ function drawBoard(size) {
 }
 
 drawBoard(16);
+
+const squares = document.querySelectorAll('.square');
+squares.forEach(square => {
+    square.addEventListener('mouseover', () => {
+        square.setAttribute('style','background-color:black;');
+    });
+});
+
+squares.forEach(square => {
+    square.addEventListener('mouseout', () => {
+        square.setAttribute('style','background-color:white;');
+    });
+});
