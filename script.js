@@ -15,17 +15,21 @@ function drawBoard(size) {
     }
 }
 
-drawBoard(16);
-
 const squares = document.querySelectorAll('.square');
-squares.forEach(square => {
-    square.addEventListener('mouseover', () => {
-        square.setAttribute('style','background-color:black;');
-    });
-});
 
-squares.forEach(square => {
-    square.addEventListener('mouseout', () => {
-        square.setAttribute('style','background-color:white;');
+function addTrail() {
+    squares.forEach(square => {
+        square.addEventListener('mouseover', () => {
+            square.setAttribute('style','background-color:black;');
+        });
     });
-});
+    
+    squares.forEach(square => {
+        square.addEventListener('mouseout', () => {
+            square.setAttribute('style','background-color:white;');
+        });
+    });
+}
+
+drawBoard(16);
+addTrail();
