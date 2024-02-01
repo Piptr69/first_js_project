@@ -30,6 +30,9 @@ body {
     background-color: white;
     width: 500px;
     height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 #panel {
@@ -59,4 +62,20 @@ input {
 #sizeValue {
     font-size: 20px;
     align-self: center;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.square {
+    background-color: white;
+    border: black solid 1px;
+    flex-grow: 1;
+}
+
+.row {
+    display: flex;
 }
