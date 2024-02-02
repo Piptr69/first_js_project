@@ -1,4 +1,5 @@
 const container = document.querySelector('#drawing-board');
+const squares = document.querySelectorAll('.square');
 
 function drawBoard(size) {
     for (let i = 0; i < size; i++)
@@ -13,10 +14,9 @@ function drawBoard(size) {
         }
         container.appendChild(row);
     }
+  
 }
 drawBoard(16);
-
-const squares = document.querySelectorAll('.square');
 
 function addTrail() {
     squares.forEach(square => {
