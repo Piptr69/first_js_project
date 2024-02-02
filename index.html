@@ -8,21 +8,18 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1 id="title">Etch-a-sketch</h1>
-    <div id="main-body">
-        <div id="left-panel">
-            <div id="color">color</div>
-            <div id="button-list">
-                <button class="button">Color mode</button>
-                <button class="button">Rainbow mode</button>
-                <button class="button">Eraser mode</button>
-                <button class="button">Clear mode</button>
-            </div>
-            <div id="zipper">zipper</div>
+    <header class="header">
+        <h1 class="title">Etch-a-sketch</h1>
+    </header>
+    <div class="main">
+        <div id="panel">
+            <input id="colorPicker"></input>
+            <button id="SquareBtn">Number of squares</button>
+            <div id="sizeValue">16 x 16</div>
         </div>
         <div id="drawing-board"></div>
     </div>
-    <div id="footer">Made by piptr</div>
+    <footer class="footer">Made by piptr</footer>
 
 </body>
 </html>

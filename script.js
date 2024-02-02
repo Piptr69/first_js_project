@@ -33,3 +33,19 @@ function addTrail() {
 }
 
 addTrail();
+
+function clearGrid()
+{
+    const rows = document.querySelectorAll('.row');
+    rows.forEach((row) => {
+        container.removeChild(row);
+    });
+}
+
+const button = document.querySelector('#SquareBtn');
+button.addEventListener('click', () => {
+    size = prompt('Enter size: ');
+    clearGrid();
+    drawBoard(size);
+    addTrail();
+});
