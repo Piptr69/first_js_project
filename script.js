@@ -1,5 +1,4 @@
 const container = document.querySelector('#drawing-board');
-const squares = document.querySelectorAll('.square');
 
 function drawBoard(size) {
     for (let i = 0; i < size; i++)
@@ -14,11 +13,11 @@ function drawBoard(size) {
         }
         container.appendChild(row);
     }
-  
+    let squares = document.querySelectorAll('.square');
+    addTrail(squares);
 }
-drawBoard(16);
 
-function addTrail() {
+function addTrail(squares) {
     squares.forEach(square => {
         square.addEventListener('mouseover', () => {
             square.setAttribute('style','background-color:black;');
@@ -31,8 +30,6 @@ function addTrail() {
         });
     });
 }
-
-addTrail();
 
 function clearGrid()
 {
@@ -47,5 +44,6 @@ button.addEventListener('click', () => {
     size = prompt('Enter size: ');
     clearGrid();
     drawBoard(size);
-    addTrail();
 });
+
+drawBoard(16);
