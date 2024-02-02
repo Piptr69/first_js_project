@@ -32,7 +32,6 @@ body {
     height: 500px;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
 }
 
 #panel {
@@ -72,10 +71,10 @@ input {
 
 .square {
     background-color: white;
-    border: black solid 1px;
     flex-grow: 1;
 }
 
 .row {
     display: flex;
+    height: 500px;
 }
