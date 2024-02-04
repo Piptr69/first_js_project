@@ -41,7 +41,9 @@ function clearGrid()
 
 const button = document.querySelector('#SquareBtn');
 button.addEventListener('click', () => {
-    size = prompt('Enter size: ');
+    do {
+        size = prompt('Enter size: ');
+    } while(size > 64);
     clearGrid();
     drawBoard(size);
 });
