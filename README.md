@@ -1,1 +1,1 @@
-# first_js_project
+# my first javascript project
